@@ -25,6 +25,5 @@ sealed class Destinations(
     object ItemDetails: Destinations(route = "ItemDetails") {
         const val itemId = "ItemId"
     }
-    object Search: Destinations(route = "Search")
     object EditProfile: Destinations(route = "EditProfile")
 }

@@ -56,9 +56,6 @@ fun RootNavigationGraph(
                         navController
                     )
                 }
-                composable(route = Destinations.Search.route) {
-                    SearchScreen(navController = navController, menuItems = menuItems)
-                }
                 composable(route = Destinations.EditProfile.route) {
                     EditProfileScreen(sharedPreferences, navController)
                 }
