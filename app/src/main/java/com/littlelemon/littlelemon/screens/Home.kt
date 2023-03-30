@@ -55,25 +55,23 @@ fun HomeScreen(
     }
 
     Column {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(60.dp)
-                .padding(16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
+        Row(horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically)
+        {
            Image(
                painter = painterResource(id = R.drawable.littlelemontopbar),
                contentDescription = "Logo",
-               Modifier.aspectRatio(5f, true)
-           )
+               Modifier.fillMaxWidth(0.5F),
+                   )
+
            IconButton(onClick = {
                navController.navigate(Destinations.Search.route)
            }) {
                Image(
                    imageVector = Icons.Default.Search,
-                   contentDescription = "Search Icon"
+                   contentDescription = "Search Icon",
+                   modifier = Modifier.size(35.dp)
                )
            }
         }
